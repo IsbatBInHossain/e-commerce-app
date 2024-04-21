@@ -24,7 +24,7 @@ const config = {
           light: '#14B1F0',
           dark: '#0AAEB9',
         },
-        'dark-teal': '#03484D',
+        'dark-teal': { DEFAULT: '#03484D', shade: '#0E3B3E' },
         'fire-engine': '#C82020',
       },
       keyframes: {

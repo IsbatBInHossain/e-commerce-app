@@ -5,7 +5,7 @@ import { FaSearch } from 'react-icons/fa'
 
 const Searchbar = () => {
   return (
-    <div className=' flex w-[530px] h-10'>
+    <div className=' flex h-10'>
       <DropDownButton />
       <Input
         placeholder=' Search for products'
