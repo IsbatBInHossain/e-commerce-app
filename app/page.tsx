@@ -3,7 +3,7 @@ import Category from '@/components/Category/Category'
 
 export default function Home() {
   return (
-    <main>
+    <main className=' w-full'>
       <Banner />
       <Category />
     </main>
