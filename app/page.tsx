@@ -6,6 +6,7 @@ export default function Home() {
     <main className=' w-full'>
       <Banner />
       <Category />
+      <div className=' h-20'></div>
     </main>
   )
 }

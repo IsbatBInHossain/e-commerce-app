@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaTwitter,
 } from 'react-icons/fa6'
+import Link from 'next/link'
 
 const NavFooter = () => {
   return (
@@ -14,10 +15,18 @@ const NavFooter = () => {
           <IoMenuOutline width={14} height={14} />
           <p>Browse By Category</p>
         </div>
-        <p className=' text-xs'>Home</p>
-        <p className=' text-xs'>Early Montly Installment</p>
-        <p className=' text-xs'>Shop By Brands</p>
-        <p className=' text-xs'>Become a Vendor</p>
+        <Link className=' text-xs' href='/'>
+          Home
+        </Link>
+        <Link className=' text-xs' href='/'>
+          Early Montly Installment
+        </Link>
+        <Link className=' text-xs' href='/'>
+          Shop By Brands
+        </Link>
+        <Link className=' text-xs' href='/'>
+          Become a Vendor
+        </Link>
       </div>
       <div className=' flex gap-6 items-center mr-8'>
         <FaFacebookF width={20} height={20} />
