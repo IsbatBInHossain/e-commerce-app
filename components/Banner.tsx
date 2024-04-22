@@ -19,7 +19,7 @@ const Banner = () => {
             decisions.
           </p>
         </div>
-        <Button className=' bg-turquoise-light hover:bg-turquoise-dark hover:shadow-sm  mt-2 max-w-[150px]'>
+        <Button className=' bg-turquoise-dark hover:bg-dark-teal hover:shadow-sm  mt-2 max-w-[150px]'>
           View More
         </Button>
       </div>
