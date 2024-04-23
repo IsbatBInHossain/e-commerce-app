@@ -8,7 +8,7 @@ import {
 } from '../ui/carousel'
 import ProductCard from './ProductCard'
 
-const NewDeals = () => {
+const NewArrivals = () => {
   return (
     <div className=' py-10 px-20 flex flex-col mt-10'>
       <h2 className=' text-[28px] ml-3 mb-4'>
@@ -36,4 +36,4 @@ const NewDeals = () => {
     </div>
   )
 }
-export default NewDeals
+export default NewArrivals
