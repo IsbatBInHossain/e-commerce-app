@@ -5,6 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+// truncates long strings
 export function truncateString(text: string, maxLength = 20) {
   if (text.length <= maxLength) {
     return text

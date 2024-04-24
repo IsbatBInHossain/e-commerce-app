@@ -2,7 +2,7 @@ import { FaHeadphones } from 'react-icons/fa6'
 
 const NavCTA = () => {
   return (
-    <div className=' flex flex-col justify-center gap-0.5'>
+    <div className='  flex-col justify-center gap-0.5 hidden lg:flex'>
       <p className=' text-[9px]'>Call Us Now</p>
       <div className=' flex gap-2 justify-between items-center'>
         <FaHeadphones className=' w-5 h-5' />

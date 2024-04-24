@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const NavFooter = () => {
   return (
-    <div className='flex justify-between items-center bg-dark-teal-shade text-white py-3 px-14'>
+    <div className='hidden lg:flex justify-between items-center bg-dark-teal-shade text-white py-3 px-14'>
       <div className=' flex items-center gap-9'>
         <div className=' flex items-center gap-2'>
           <IoMenuOutline width={14} height={14} />

@@ -1,13 +1,14 @@
+import { truncateString } from '@/lib/utils'
 import { ProductType } from '@/type'
 import Image from 'next/image'
 
-const DealCard = ({
-  product,
-  index,
-}: {
+interface DealCardProp {
   product: ProductType
   index: number
-}) => {
+  maxIndex: number
+}
+
+const DealCard = ({ product, index, maxIndex }: DealCardProp) => {
   const nonDiscounrtedPrice = (product.price * 1.1).toFixed(2)
   const fromColor = [
     'from-[#00C9FF]',
@@ -23,12 +24,15 @@ const DealCard = ({
     'to-[#EECFCC]',
     'to-[#EDDE5D]',
   ][index % 5]
-  const isSpecial = index % 5 == 1
+  const isSpecial =
+    index % 5 == 1 &&
+    (maxIndex - index >= 4 || maxIndex % 5 == 0 || maxIndex % 5 == 4)
+  const truncatedTitle = truncateString(product.title, 50)
 
   return (
     <div
       className={`flex flex-col p-6 border relative ${
-        isSpecial ? 'lg:row-span-2' : ''
+        isSpecial ? 'lg:row-span-2 lg:h-full lg:justify-between' : ''
       }`}
     >
       <div className=' flex items-center justify-between w-full pr-12'>
@@ -51,7 +55,7 @@ const DealCard = ({
               isSpecial ? 'lg:max-w-full' : ''
             }`}
           >
-            {product.title}
+            {truncatedTitle}
           </h3>
           <p className=' text-turquoise-light text-[27px]'>$ {product.price}</p>
           <div className=' relative'>
@@ -61,15 +65,17 @@ const DealCard = ({
         </div>
         <div
           className={`flex items-center justify-center ${
-            isSpecial ? 'lg:absolute' : ''
+            isSpecial ? 'lg:absolute lg:bottom-[25%]' : ''
           }`}
         >
           <Image
             src={product.image}
             alt={product.title}
-            width={190}
+            width={isSpecial ? 300 : 190}
             height={170}
-            className=' object-contain max-h-[170px]'
+            className={`object-contain max-h-[170px] ${
+              isSpecial ? 'lg:max-h-[300px]' : ''
+            }`}
           />
         </div>
       </div>

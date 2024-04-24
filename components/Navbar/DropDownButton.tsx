@@ -12,7 +12,7 @@ import { FaChevronDown } from 'react-icons/fa'
 const DropDownButton = () => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className=' bg-white p-2 text-slate-400 w-44 text-[13px] rounded-sm'>
+      <DropdownMenuTrigger className=' bg-white p-2 text-slate-400 lg:w-44 md:w-32 hidden md:block text-[13px] rounded-sm'>
         <div className=' flex items-center justify-between min-w-28'>
           <p className=' w-fit'>All Categories</p>
           <div className=' w-6 h-6 flex items-center'>
