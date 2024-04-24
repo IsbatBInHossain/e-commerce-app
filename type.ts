@@ -1,8 +1,3 @@
-export interface CategoryType {
-  name: string
-  image: string
-}
-
 export interface ProductType {
   id: number
   title: string
