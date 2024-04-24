@@ -1,12 +1,14 @@
 'use client'
 
+import { useAppSelector } from '@/store/hooks'
 import Image from 'next/image'
 import { useState } from 'react'
 import { FaRegHeart, FaHeart } from 'react-icons/fa'
 import { IoPersonOutline } from 'react-icons/io5'
+import type { RootState } from '@/store/store'
 
 const NavIcons = () => {
-  const cartItems = 3
+  const cartItems = useAppSelector((state: RootState) => state.cart.value)
   const [liked, setLiked] = useState(false)
 
   return (
